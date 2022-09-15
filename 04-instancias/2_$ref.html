@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiples instancias</title>
+</head>
+
+<body>
+
+   <!--colores-->
+   <div id="app">
+       <center>
+           <button @click="cambiarColor()">colores</button>
+           <hr>
+    
+           <div ref="content">-----</div>
+           <div ref="content2">-----</div>
+
+    
+       </center>
+
+   </div>
+
+   <!-- document.querySelector("$$$") --- JS
+    $ref -- vue.js ; con vue accedemos a los componentes con se hace con js-->
+
+    <!-- CDN V2 -->
+
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+
+        const app = new Vue({
+            el:'#app',
+            data:{
+                numero:0
+            },
+            methods:{
+               cambiarColor(){
+                if (this.numero == 0) {
+                    this.numero++
+                    return this.$refs.content.style.background = "red"
+                }else if (this.numero == 1) {
+                    this.numero++
+                    return this.$refs.content.style.background = "blue"
+                }else if (this.numero == 2) {
+                    this.numero = 0
+                    return this.$refs.content.style.background = "green"
+                }
+               }
+            }
+        })
+       
+    </script>
+</body>
+</html>

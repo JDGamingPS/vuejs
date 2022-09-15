@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-for</title>
+</head>
+<body>
+    <!--
+        Directica
+        v-for CDN V2
+        v-for |  item  in  items | 
+                (alias)   (matriz)
+    -->
+    
+    <div id="app">
+        <li v-for="dato in object">
+            {{dato}}
+            <!-- texto  <- proviene desde la datta; {{}} <- interpolacion-->
+
+        </li>
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="10_v_for.js"></script>
+</html>

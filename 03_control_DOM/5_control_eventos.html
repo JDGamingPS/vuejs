@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>control de eventos</title>
+</head>
+<body>
+
+    <!--
+        .once = 1 unica ves
+        .stop = 1 solo componente
+    -->
+
+    <!-- 
+        los eventos o events son la contraparte
+        de los props
+        - sirven para pasar informacion desde el
+        componente hijo al padre.
+     -->
+
+     <div id="app">
+        <p>{{contador}}</p>
+        <button v-on:mouseover=" contador += 1 ">sumar</button> <!-- para que cuando pasa el cursor por el voton se suma uno -->
+        <button v-on:click="contador += 1" >sumar - onClick</button>
+        
+    </div>
+
+</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="5_contEventos.js"></script>
+</html>

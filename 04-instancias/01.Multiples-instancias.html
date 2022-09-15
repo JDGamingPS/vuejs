@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiples instancias</title>
+</head>
+
+<body>
+
+    <!-- cada instancia (app, componente) son independientes por mas que hace uso de la otra independencia -->
+    <div id="app">
+        {{titulo}}
+        <p>este es el componente 1</p>
+        <input type="text" v-model="nombre">
+        {{nombre}}
+    </div>
+
+    <hr>
+    <div id="componente">
+        <input type="text" v-model="text"> 
+        {{text}}
+    </div>
+
+    <!-- instancias independencias -->
+    <!-- CDN V2 -->
+        
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const uno = new Vue({
+            el:'#app',
+            data: {
+                titulo: 'JGP',
+                nombre: 'Daniel Perez'
+            }
+        })
+
+        const dos = new Vue({
+            el:'#componente',
+            data: {
+                text: uno.nombre
+            }
+        })
+
+    </script>
+</body>
+</html>
