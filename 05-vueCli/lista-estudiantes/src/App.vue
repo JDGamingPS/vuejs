@@ -51,10 +51,10 @@ export default {
   },
   methods:{
     agregarEstudiante: function () {
-      var {nombre, colEst} = this.registro
+      var {nombre, colegio} = this.registro
       this.arrayRegistros.push({
         nombre,
-        colEst
+        colegio
       })
     }
   }
